@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>星莱健身</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="renderer" content="webkit"/>
+        <meta name="keywords" content="VR全景合成，全景合成，全景在线合成，全景制作软件，星莱健身全景效果图，运动全景效果图，运动装修全景效果图，建E全景"/>
+        <meta name="description" content=" 建E全景是一款免费的VR全景在线制作软件，3分钟快速合成，10秒一键分享，让你签单快人一步，是300万设计师都在用的在线签单工具。"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+        <meta property="og:image" content="https://vrimg.justeasy.cn/pano/20211122/52-084551_619ae83fc003f.tiles/thumb.jpg"/>
+        <meta property="og:title" content="星莱健身"/>
+        <script type="text/javascript" src="https://res1.justeasy.cn/min/b=js&f=jquery.min.js,jquery.qrcode.min.js,touch.min.js,3.0/page/vr/cat.touchjs.js,art-template-web.js,clipboard.min.js,swiper4.0.5.min.js,flexible.js,iscroll2.js,navbarscroll.js?v=20240909635"></script>
+        <style>
+            .cur {
+                cursor: pointer;
+                -webkit-tap-highlight-color: rgba(255,255,255,0);
+                -webkit-user-select: none;
+                -moz-user-focus: none;
+                -moz-user-select: none;
+            }
+
+            .layer-pano-pwd {
+                background-image: url("https://res1.justeasy.cn/images/vr/microIndex/bj.jpg");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center
+            }
+
+            .pop {
+                margin-top: 335px!important
+            }
+
+            .pop .pwd {
+                padding-left: 0px !important
+            }
+
+            .pop .pwd {
+                height: 40px!important;
+                border-radius: 6px;
+                opacity: 0.8;
+                width: 235px!important;
+                text-indent: 20px
+            }
+
+            .pop .submit {
+                border-radius: 6px!important;
+                height: 40px
+            }
+
+            .pop .submit {
+                border-radius: 6px!important;
+                height: 40px
+            }
+
+            .pop .submit {
+                color: #ffffff
+            }
+
+            @media screen and (max-width: 768px) {
+                .layer-pano-pwd {
+                    background-image:url("https://res1.justeasy.cn/images/vr/microIndex/bj_s.jpg");
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center
+                }
+
+                .r-txt {
+                    display: block!important;
+                    width: 100%!important
+                }
+
+                .submit {
+                    margin-top: 10px
+                }
+
+                .pop .pwd {
+                    width: 170px!important
+                }
+            }
+        </style>
+        <script>
+            var advert_type = "1";
+            var open_advert_text = "";
+            var open_advert_text_color = "";
+            var open_advert_time = "";
+            var open_advert_color = "";
+            function getQueryStringByName(name) {
+                var result = location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)","i"));
+                if (result == null || result.length < 1) {
+                    return "";
+                }
+                return result[1];
+            }
+            function G(name) {
+                return getQueryStringByName(name);
+            }
+            $.ajax({
+                url: "https://vr.justeasy.cn/v/ct",
+                type: 'get',
+                dataType: 'jsonp',
+                timeout: 1000,
+                data: {
+                    id: '16372h827932amf5',
+                    lastupdate: '1638925923',
+                    act: 'preview',
+                    host: 'vr.justeasy.cn',
+                    timestamp: '1744202024',
+                    authid: '0',
+                    noncestr: '',
+                    signature: '61c4f74d135799896bb991f322cfdbe5b83a843c',
+                    _get: window.location.search
+                },
+                success: function(res) {
+                    if (res.status == -201) {
+                        location.href = res.url;
+                    }
+                }
+            });
+            var weixin = 0;
+            var _userAgent = navigator.userAgent;
+            if (_userAgent.indexOf('MicroMessenger') > -1 && _userAgent.indexOf('wxwork') > -1) {
+                weixin = 2;
+            } else if (_userAgent.indexOf('MicroMessenger') > -1) {
+                weixin = 2;
+            }
+            var wx_share_appId = 'wx2ed7c1e3c0abd05b';
+            if (weixin == 1) {
+                wx_share_appId = 'ww219d1e0efe7d0cd7';
+            }
+            var vr_isWxAndroid = 0;
+            if (weixin > 0 && _userAgent.indexOf('Android') > -1) {
+                vr_isWxAndroid = 1;
+            }
+            function setCookie(name, value, Days) {
+                var exp = new Date();
+                exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+                document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+            }
+            function getCookie(name) {
+                var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                if (arr = document.cookie.match(reg))
+                    return unescape(arr[2]);
+                else
+                    return null;
+            }
+            function settime() {
+                if (countdown == 0) {
+                    $("#timesss").html(countdown + "s");
+                    $("#timesss").html("关闭").css({
+                        color: "#fff"
+                    })
+                    $(".vr-close222").addClass("vr-close-btn");
+                    $(".vr-gg-box").hide();
+                    clearInterval(downClearTime);
+                } else {
+                    countdown--;
+                    $("#timesss").html(countdown + "s");
+                }
+            }
+            function openAdvertlink(url) {
+                if (app == "android") {
+                    android.goMicro('0', ' ', url);
+                } else if (app == "ios") {
+                    window.webkit.messageHandlers.goMicro.postMessage({
+                        canShare: '0',
+                        title: ' ',
+                        url: url
+                    });
+                } else {
+                    if (is_mobile > 0) {
+                        location.href = url;
+                    } else {
+                        window.open(url);
+                    }
+                }
+            }
+            var liked = ''
+              , like_num = 0
+              , view_num = 0
+              , is_view = 0
+              , is_like = 0
+              , is_vip = 0;
+            var wx_share_timestamp = ''
+              , wx_share_nonceStr = ''
+              , wx_share_signature = '';
+            var pano_like = getCookie('pano_like');
+            var uv_code = getCookie('vr_vip_statis_uv');
+            var vr_view_num = 0;
+            var countdown = 0;
+            var downClearTime = null;
+            var _time = parseInt(0);
+            var countDownClearTime = null;
+            var vip_auth_micro = 0
+              , vip_auth_TopAdvert = 0
+              , vip_auth_watermark = 0
+              , vip_auth_logo = 0;
+            var vip_auth_watermark_origin = ''
+              , is_offline_pano = 0;
+            var act = "preview";
+            var open_advert_h5 = "";
+            $.ajax({
+                url: "https://vr.justeasy.cn/v/lv/19434915",
+                type: 'get',
+                dataType: 'jsonp',
+                data: {
+                    pano_like: pano_like,
+                    uv_code: uv_code,
+                    weixin: weixin,
+                    url: location.href
+                },
+                success: function(res) {
+                    if (res.status == 200) {
+                        is_vip = res.list.is_vip;
+                        liked = res.list.liked;
+                        like_num = res.list.like_num;
+                        view_num = res.list.view_num;
+                        is_view = res.list.is_view;
+                        is_like = res.list.is_like;
+                        wx_share_timestamp = res.list.timestamp;
+                        wx_share_nonceStr = res.list.nonceStr;
+                        wx_share_signature = res.list.signature;
+                        vr_view_num = res.list.view_num;
+                        vip_auth_micro = res.list.vip_auth_micro;
+                        vip_auth_TopAdvert = res.list.vip_auth_TopAdvert;
+                        vip_auth_watermark = res.list.vip_auth_watermark;
+                        vip_auth_watermark_origin = res.list.vip_auth_watermark_origin;
+                        is_offline_pano = res.list.is_offline;
+                        vip_auth_logo = res.list.vip_auth_logo;
+                        if (vip_auth_TopAdvert) {
+                            $('.top-advert').hide();
+                            $('.vip_urlname').hide();
+                            $('#bodyclass').hide();
+                        }
+                        if (!res.list.vip_auth_intment) {
+                            $('.mdesigner1').hide();
+                        }
+                        if (res.list.vip_auth_micro) {
+                            $('.p_class_micro_icon').hide();
+                        }
+                        if (!res.list.vip_auto_map) {
+                            $('.vip_map').hide();
+                        }
+                        $('#pano-wrapper .mobile').hide()
+                        if (res.list.vip_auto_mobile == 2) {
+                            $('#pano-wrapper .mobile').show()
+                        }
+                        $('.vip_mobile1').show()
+                        if (res.list.shareurl) {
+                            $('#shareimg canvas').remove();
+                            $('#shareimg').qrcode({
+                                render: 'canvas',
+                                ecLevel: 'H',
+                                size: 180,
+                                radius: 0.5,
+                                width: 180,
+                                height: 180,
+                                background: '#ffffff',
+                                text: res.list.shareurl
+                            });
+                        }
+                        $('.canvasHary').hide();
+                        if (res.list.uv_code != -1) {
+                            setCookie('vr_vip_statis_uv', res.list.uv_code, 1);
+                        }
+                        if (is_offline_pano == 1) {
+                            $('body').html('<div id="save_theft_tips" class="vr-del-showbox vr-save-theft-showbox none">\n' + '    <div class="d-text d-text2" style="padding-top: 80px;">\n' + '        <p style="font-size: 24px;">该作品涉嫌违规， 已强制停止访问。</p>\n' + '    </div>\n' + '    <div class="txt txt2" style="margin-top: 10px;text-align: center;">\n' + '        <p class="p1"><span>注：</span>建E全景为公共合成平台，请积极配合，营造良好的展示环境！</p>\n' + '    </div>\n' + '</div>');
+                            layer.open({
+                                type: 1,
+                                title: '下架提醒',
+                                content: $("#save_theft_tips"),
+                                area: ['560px', '300px'],
+                                closeBtn: false,
+                                shadeClose: false,
+                            });
+                            removepano("krpanoSWFObject");
+                            return false;
+                        }
+                        if (is_mobile > 0) {
+                            $('p#btn_like').attr('data-val', liked);
+                            $('p#btn_like .item-icon-like').attr('style', 'background-image: url("https://res1.justeasy.cn/images/vr-revision/zan' + liked + '-moblie.png");');
+                            $('p#btn_like .item-title').find('#like_num').html(like_num);
+                            if (res.list.advert_open == '1' && res.list.advert.pic2_url != '') {
+                                if (_time > 0 && open_advert_h5 != '') {
+                                    if (res.list.advert_type == '1') {
+                                        var _html = `<div class="cont"><div class="vr-close222" style="z-index: 2147483647;"><span class="timesss" id="timesss">5s</span></div><div class="cover-gg">广告</div><a href="javascript:openAdvertlink('` + res.list.advert.link + `');" style="cursor:pointer;"><img src="` + res.list.advert.pic2_url + `"></a></div>`;
+                                        $('#preview_advert').html(_html);
+                                        setTimeout(function() {
+                                            $('#preview_advert').show();
+                                            downClearTime = setInterval(settime, 1000);
+                                            $(document).on('click', '.vr-gg-box .vr-close-btn', function(e) {
+                                                e.stopPropagation();
+                                                e.preventDefault();
+                                                $(".vr-gg-box").hide();
+                                                clearInterval(downClearTime);
+                                            });
+                                        }, (_time * 1000) + 300);
+                                    } else {
+                                        $('#preview_advert').append(res.list.advert.pic2_url);
+                                        setTimeout(function() {
+                                            $('#preview_advert').show();
+                                        }, (_time * 1000) + 300);
+                                        setTimeout(function() {
+                                            $('#preview_advert').hide();
+                                        }, (_time * 1000) + 5000);
+                                    }
+                                } else {
+                                    if (res.list.advert_type == '1') {
+                                        var _html = `<div class="cont"><div class="vr-close222" style="z-index: 2147483647;"><span class="timesss" id="timesss">关闭</span></div><div class="cover-gg">广告</div><a href="javascript:openAdvertlink('` + res.list.advert.link + `');" style="cursor:pointer;"><img src="` + res.list.advert.pic2_url + `"></a></div>`;
+                                        $('#preview_advert').html(_html);
+                                        downClearTime = setInterval(function() {
+                                            $('#preview_advert').show();
+                                            $(document).on('click', '.vr-gg-box .vr-close222', function(e) {
+                                                e.stopPropagation();
+                                                e.preventDefault();
+                                                $(".vr-gg-box").hide();
+                                                clearInterval(downClearTime);
+                                            });
+                                        }, 1000);
+                                    } else {
+                                        $('#preview_advert').append(res.list.advert.pic2_url);
+                                        $('#preview_advert').show();
+                                        setTimeout(function() {
+                                            $('#preview_advert').hide();
+                                        }, 5000);
+                                    }
+                                }
+                            }
+                        } else {
+                            $('a#btn_like').attr('data-val', liked);
+                            $('a#btn_like .item-icon-like').attr('style', 'background-image: url("https://res1.justeasy.cn/images/vr-revision/zan' + liked + '.png");');
+                            $('a#btn_like').siblings('#like_num').html(like_num);
+                            if (res.list.advert_open == '1' && res.list.advert.pic1_url != '') {
+                                if (_time > 0 && open_advert_h5 != '') {
+                                    if (res.list.advert_type == '1') {
+                                        var _html = `<div class="cont"><div class="vr-close222" style="z-index: 2147483647;"><span class="timesss" id="timesss">5s</span></div><div class="cover-gg">广告</div><a href="javascript:openAdvertlink('` + res.list.advert.link + `');" style="cursor:pointer;"><img src="` + res.list.advert.pic1_url + `"></a></div>`;
+                                        $('#preview_advert').html(_html);
+                                        setTimeout(function() {
+                                            $('#preview_advert').show();
+                                            downClearTime = setInterval(settime, 1000);
+                                            $(document).on('click', '.vr-gg-box .vr-close-btn', function(e) {
+                                                e.stopPropagation();
+                                                e.preventDefault();
+                                                $(".vr-gg-box").hide();
+                                                clearInterval(downClearTime);
+                                            });
+                                        }, (_time * 1000) + 300);
+                                    } else {
+                                        $('#preview_advert').append(res.list.advert.pic1_url);
+                                        setTimeout(function() {
+                                            $('#preview_advert').show();
+                                        }, (_time * 1000) + 300);
+                                        setTimeout(function() {
+                                            $('#preview_advert').hide();
+                                        }, (_time * 1000) + 5000);
+                                    }
+                                } else {
+                                    if (res.list.advert_type == '1') {
+                                        var _html = `<div class="cont"><div class="vr-close222" style="z-index: 2147483647;"><span class="timesss" id="timesss">关闭</span></div><div class="cover-gg">广告</div><a href="javascript:openAdvertlink('` + res.list.advert.link + `');" style="cursor:pointer;"><img src="` + res.list.advert.pic1_url + `"></a></div>`;
+                                        $('#preview_advert').html(_html);
+                                        downClearTime = setInterval(function() {
+                                            $('#preview_advert').show();
+                                            $(document).on('click', '.vr-gg-box .vr-close222', function(e) {
+                                                e.stopPropagation();
+                                                e.preventDefault();
+                                                $(".vr-gg-box").hide();
+                                            });
+                                            clearInterval(downClearTime);
+                                        }, 1000);
+                                    } else {
+                                        $('#preview_advert').append(res.list.advert.pic1_url);
+                                        $('#preview_advert').show();
+                                        setTimeout(function() {
+                                            $('#preview_advert').hide();
+                                        }, 5000);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            function IsMobile() {
+                var userAgentInfo = navigator.userAgent.toLowerCase();
+                var Agents = ['nokia', 'sony', 'ericsson', 'mot', 'samsung', 'htc', 'sgh', 'lg', 'sharp', 'sie-', 'philips', 'panasonic', 'alcatel', 'lenovo', 'iphone', 'iPhone', 'ipod', 'blackberry', 'meizu', 'android', 'netfront', 'symbian', 'ucweb', 'windowsce', 'palm', 'operamini', 'operamobi', 'openwave', 'nexusone', 'cldc', 'midp', 'wap', 'mobile', 'ipad', 'webview', 'Mobile', 'Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod', 'vivo'];
+                var flag = false;
+                for (var v = 0; v < Agents.length; v++) {
+                    if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                        flag = true;
+                        break;
+                    }
+                }
+                return flag;
+            }
+            var app = G('referer');
+            var isbigscreen = G('isBigScreen');
+            var _fromapp = G('_fromapp');
+            var test = G('test');
+            var app_referer = 0;
+            var is_mobile;
+            if (IsMobile()) {
+                is_mobile = 200;
+                if ($.inArray(app, ['ios', 'android']) != -1) {
+                    app_referer = 1;
+                }
+                if (_fromapp == 'sjtt') {
+                    app_referer = 2;
+                }
+            } else {
+                is_mobile = -200;
+                isbigscreen = 2;
+            }
+        </script>
+        <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+        <script type="text/javascript" src="https://res1.justeasy.cn/vr2023/tour_21.js"></script>
+        <script type="text/javascript" src="https://res1.justeasy.cn/js/layer/layer-v3.1.1/layer.js?v=20240909635"></script>
+        <link rel="stylesheet" href="https://res1.justeasy.cn/css/quanjing/vrSynthesis.css?v=20240909635">
+        <link rel="stylesheet" type="text/css" href="https://res1.justeasy.cn/min/b=css&f=swiper.min.css,vr-preview.css,vr-preview-son.css,vr-edit.css,vip_vr.css,quanjing/vrEdit.css?v=202409096352">
+        <script type="text/javascript" src="https://res1.justeasy.cn/min/b=js&f=viewer.min.js"></script>
+        <link rel="stylesheet" href="https://res1.justeasy.cn/css/viewer.min.css?v=20240909635">
+    </head>
+    <body>
+        <div id="bodyclass" style="width: 100%;height: 100%;z-index: 1900;position: absolute;display: none;">
+            <div id="passWordWarp"></div>
+            <div id="loading">
+                <div id="loadingImg" style="width:100%;height: 100%;display: flex;justify-content: center;align-items: center;"></div>
+            </div>
+            <div class="time-start" style="cursor:pointer;" onclick="clearTimeout(countDownClearTime);startPano();">
+                <span class="time" id="time"></span>
+                <span class="time_text">s自动进入全景或点击直接进入</span>
+            </div>
+        </div>
+        <audio id="mp3" src="https://vrmusic.justeasy.cn/uploads/music/202111/20211105131339_6184bd831a203.mp3" loop="loop" style="display: none;"></audio>
+        <div class="pano_left" id="pano_preview_compare" style="display: none;width:100%;height:100%;"></div>
+        <div id="pano" style="width:100%;height:100%;">
+            <noscript>
+                <table style="width:100%;height:100%;">
+                    <tr style="vertical-align:middle;">
+                        <td>
+                            <div style="text-align:center;">
+                                ERROR:<br/>
+                                <br/>
+                                Javascript not activated<br/>
+                                <br/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </noscript>
+        </div>
+        <script>
+            var PANOID = "19434915";
+            var uid = parseInt("2136239");
+            var has_expired = parseInt("0");
+            var versions = "0";
+            var music = parseInt("1");
+            var xml = "https://vrxmlnew.justeasy.cn/19434915_1638925923.xml";
+            var krpano;
+            var bodyclass = "";
+            var sendboxopen = "";
+            var lat = "";
+            var lng = "";
+            var shareUrl = "https://vr.justeasy.cn/view/16372h827932amf5-1638925923.html";
+            var bodyBackgroundColor = "";
+            var advertStatus = parseInt("0");
+            var vr_model_group = parseInt("2");
+            var galleryThumbs, galleryTop, tag_index = 0, json_List;
+            var pano_setting_showthumbs = "false";
+            var wx_share_desc = '';
+            var wx_share_imgUrl = 'https://vrimg.justeasy.cn/pano/20211122/52-084551_619ae83fc003f.tiles/thumb.jpg';
+            var wx_share_title = '星莱健身';
+            var vr_site_vrimg = "https://vrimg.justeasy.cn/";
+            var vr_site_url = "https://vr.justeasy.cn/";
+            var vr_adv_url = "";
+            var vr_site_res1_url = "https://res1.justeasy.cn/";
+            var vr_water_origin = "";
+            var vr_is_vip = "0";
+            var _SessionStoragejson;
+            var _sandBoxisLanguage = 1;
+            var _sandTargetToSandid = [];
+            var _sandTargetToSandList = [];
+            var _sandTargetToSandInfoList = [];
+            var audioHotSpotActiveId = 0;
+            var intro = "设计说明";
+            var last_update_time = "1638925923";
+            var is_encrypt = parseInt("0");
+            var open_advert_pc = "";
+            var open_advert_h5 = "";
+            var watermark = "0";
+            var avatar = "";
+            var avatar_type = "";
+            var advert = "";
+            var is_auto = parseInt("1");
+            $(document).ready(function() {
+                $('#content').text(decodeURIComponent(advert.replace(/\+/g, '%20')));
+            });
+            _sandBoxisLanguage == 2 && $('body').addClass('pano_preview_en');
+        </script>
+        <div class="pano-revision-moblie none-revision" id="panoMoblie" style="display: none;">
+            <div class="left-moblie">
+                <p class="none scenes item cur" id="show_scenes">
+                    <i class="item-icon" style="background-image: url('https://res1.justeasy.cn/images/vr-revision/scene-moblie.png')"></i>
+                    <span class="item-title">
+                        <i>场景</i>
+                    </span>
+                </p>
+            </div>
+            <div class="right-moblie">
+                <p class="item icon-revision" id="btn_like">
+                    <i class="item-icon item-icon-like"></i>
+                    <span class="item-title">
+                        <i id="like_num">18</i>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="canvasPop none" id="canvasPop">
+            <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
+                <div class="canvas_box">
+                    <link href="https://res1.justeasy.cn/css/new_vr/shareCard.css?v=202409096352" rel="stylesheet">
+                    <div class="canvasCard_template0" id="canvasCard_template">
+                        <div class="canvasCard_template_title"></div>
+                        <div class="canvasCard_template_userInfo">
+                            <div class="canvasCard_template_hr"></div>
+                            <img class="canvasCard_template_portrait">
+                            <div class="canvasCard_template_userName"></div>
+                            <div class="canvasCard_template_hr"></div>
+                        </div>
+                        <div class="canvasCard_template_workBox">
+                            <img class="canvasCard_template_works">
+                        </div>
+                        <div class="canvasCard_template_QRcodeBox">
+                            <img class="canvasCard_template_QRcode">查看VR效果
+
+                        </div>
+                        <img class="canvasCard_template_logo" src="https://res1.justeasy.cn/images/vr/shareCard/text-logo.png">
+                    </div>
+                    <div class="canvasCard_template1" id="canvasCard_template">
+                        <img class="canvasCard_template_works">
+                        <div class="canvasCard_template_box">
+                            <img class="canvasCard_template_QRcode">
+                            <div class="canvasCard_template_box_footer">
+                                <div style="display: flex;align-items: center;">
+                                    <img class="canvasCard_template_portrait">
+                                    <div>
+                                        <div class="canvasCard_template_userName"></div>
+                                        <div class="canvasCard_template_title"></div>
+                                    </div>
+                                </div>
+                                <img class="canvasCard_template_logo" src="https://res1.justeasy.cn/images/vr/shareCard/black-logo.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="canvasCard_template2" id="canvasCard_template">
+                        <div style="display: flex;">
+                            <img class="canvasCard_template_portrait">
+                            <div>
+                                <div class="canvasCard_template_userName"></div>
+                                <div class="canvasCard_template_title"></div>
+                            </div>
+                        </div>
+                        <div class="canvasCard_template_workBox">
+                            <img class="canvasCard_template_works">
+                        </div>
+                        <div class="canvasCard_template_hr"></div>
+                        <div class="canvasCard_template_QRcodeBox">
+                            <img class="canvasCard_template_QRcode">查看VR效果
+
+                        </div>
+                        <img class="canvasCard_template_logo" src="https://res1.justeasy.cn/images/vr/shareCard/black-logo.png" alt="logo">
+                    </div>
+                    <div class="canvasCard_template3" id="canvasCard_template">
+                        <img class="canvasCard_template_works_bg">
+                        <div class="canvasCard_template_box">
+                            <img class="canvasCard_template_QRcode">
+                            <div class="canvasCard_template_box_footer">
+                                <div style="display: flex;">
+                                    <img class="canvasCard_template_portrait">
+                                    <div>
+                                        <div class="canvasCard_template_userName"></div>
+                                        <div class="canvasCard_template_title"></div>
+                                    </div>
+                                </div>
+                                <img class="canvasCard_template_logo" src="https://res1.justeasy.cn/images/vr/shareCard/black-logo.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="canvasCard_template4" id="canvasCard_template">
+                        <div class="canvasCard_template_userInfo">
+                            <img class="canvasCard_template_portrait">
+                            <div class="canvasCard_template_userName"></div>
+                        </div>
+                        <div class="canvasCard_template_workBox">
+                            <img class="canvasCard_template_works">
+                        </div>
+                        <div class="canvasCard_template_title"></div>
+                        <img class="canvasCard_template_QRcode">
+                        <div class="canvasCard_template_describe">来建E全景查看更多作品</div>
+                    </div>
+                    <div class="canvasCard_template5" id="canvasCard_template">
+                        <div class="canvasCard_template_top">
+                            <img class="canvasCard_template_works">
+                            <div class="canvasCard_template_userInfo">
+                                <div style="display: flex;align-items: center;">
+                                    <img class="canvasCard_template_portrait">
+                                    <div class="canvasCard_template_userName"></div>
+                                </div>
+                                <div class="canvasCard_template_title"></div>
+                            </div>
+                        </div>
+                        <div class="canvasCard_template_bottom">
+                            <img class="canvasCard_template_logo" src="https://res1.justeasy.cn/images/vr/shareCard/text-logo.png">
+                            <div class="canvasCard_template_QRcodeBox">
+                                <img class="canvasCard_template_QRcode">查看VR效果
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="canvasCard_template6" id="canvasCard_template">
+                        <img class="canvasCard_template_logo" src="https://res1.justeasy.cn/images/vr/shareCard/orange-logo.png">
+                        <div class="canvasCard_template_userInfo">
+                            <img class="canvasCard_template_portrait">
+                            <div>
+                                <div class="canvasCard_template_userName"></div>
+                                <div class="canvasCard_template_title"></div>
+                            </div>
+                        </div>
+                        <div class="canvasCard_template_workBox">
+                            <img class="canvasCard_template_works">
+                            <div class="canvasCard_template_work_window"></div>
+                            <div class="canvasCard_template_QRcodeBox">
+                                <img class="canvasCard_template_QRcode">查看VR效果
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="canvasCard_template7" id="canvasCard_template">
+                        <div class="canvasCard_template_workBox">
+                            <img class="canvasCard_template_logo" src="https://res1.justeasy.cn/images/vr/shareCard/black-logo.png">
+                            <img class="canvasCard_template_works">
+                        </div>
+                        <div class="canvasCard_template_hr"></div>
+                        <div class="canvasCard_template_userInfo">
+                            <img class="canvasCard_template_portrait">
+                            <div class="canvasCard_template_userName"></div>
+                            <div class="canvasCard_template_title"></div>
+                            <img class="canvasCard_template_QRcode">
+                        </div>
+                    </div>
+                    <script>
+                        const index = parseInt(0);
+                        const card = document.querySelectorAll("#canvasCard_template")[index];
+                        function setCard() {
+                            if (card) {
+                                var code = $("#shareimg").find("canvas")[0];
+                                var codeImg = code.toDataURL('image/png');
+                                card.style.display = "block";
+                                card.querySelector('.canvasCard_template_title').innerHTML = "";
+                                card.querySelector('.canvasCard_template_userName').innerHTML = "奇运动";
+                                card.querySelector('.canvasCard_template_portrait').src = "https://res1.justeasy.cn/images/defaulthead.jpg";
+                                card.querySelector('.canvasCard_template_QRcode').src = codeImg;
+                                const pic = card.querySelector('.canvasCard_template_works');
+                                if (pic)
+                                    pic.src = "https://vrimg.justeasy.cn/pano/20211122/52-084551_619ae83fc003f.tiles/thumb.jpg";
+                                const bg = card.querySelector('.canvasCard_template_works_bg');
+                                if (bg)
+                                    bg.src = "https://vrimg.justeasy.cn/pano/20211122/52-084551_619ae83fc003f.tiles/thumb.jpg";
+                            }
+                        }
+                        ;</script>
+                </div>
+                <ul class="clearfix" id="canavas_operate">
+                    <li class="item20227 fl copyLink" data-clipboard-text="https://vr.justeasy.cn/view/16372h827932amf5-1638925923.html" id="canvas_copy" style="margin-right: 45px;margin-left: 55px">
+                        <i class="icon icon-link" style="width: 100%;"></i>
+                        <p>复制链接分享</p>
+                    </li>
+                    <li class="item20227 fl" onclick="shareC()" style="margin-right: 45px;margin-left: 55px">
+                        <i class="icon icon-sm"></i>
+                        <p>扫码分享</p>
+                        <em></em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="canvas_img none" id="canvas_img"></div>
+        <div class="canvas_empty none">
+            <canvas width="83" height="83" id="canvasWhite"></canvas>
+        </div>
+        <ul class="pano-wrapper pano-revision" id='pano-wrapper' style="display:none;">
+            <li style="width: 1px;height: 50px;"></li>
+            <div class="ewm none" style="padding: 10px; width:180px;height:180px;background: #fff">
+                <div id="shareimg"></div>
+            </div>
+            <div class="share_compare" style="background: #fff; padding: 10px; display: none;">
+                <div class="code_img" id="share_compare_img"></div>
+                <div class="tips">
+                    <p>识别二维码</p>
+                    <p>单独分享对比场景</p>
+                </div>
+            </div>
+            <li class="share">
+                <div style="padding: 10px; width:180px;height:180px;background: #fff;display: none;">
+                    <div></div>
+                </div>
+                <p class="icon-revision-warp">
+                    <span class="icon-revision">
+                        <i style="background-image: url('https://res1.justeasy.cn/images/vr-revision/share.png');"></i>
+                    </span>
+                </p>
+                <div class="iconname">分享</div>
+            </li>
+            <li>
+                <a href="javascript:;" id="btn_like">
+                    <p class="icon-revision-warp">
+                        <span class="icon-revision">
+                            <i class="item-icon-like"></i>
+                        </span>
+                    </p>
+                </a>
+                <div class="iconname" id="like_num"></div>
+            </li>
+            <li class="vr-preview-icon-right">
+                <div class="scenes vr-tubiao cur" id="show_scenes">
+                    <a href="javascript:;">
+                        <img src="https://res1.justeasy.cn/vr2023/skin/scene.png" class="icon">
+                    </a>
+                    <div class="iconname">场景选择</div>
+                </div>
+            </li>
+        </ul>
+        <script type="text/html" id="material-view">
+            
+        <div class="material-view">
+            <button class="m-back" onclick="joinscene('{{id}}')">返回主场景</button>
+            <div class="cont clearfix">
+                {{each list value}}
+                <div class="item fl" style="cursor:pointer;" onclick="joinscene('{{value.id}}')">
+                    <div class="pic">
+                        <img src="https://vrimg.justeasy.cn/{{value.pic}}">
+                    </div>
+                    <p class="txt ellipsis">{{value.name}}</p>
+                    <i class="icon icon-now-material {{value.active}}"></i>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    
+        </script>
+        <script type="text/javascript" src="https://res1.justeasy.cn/min/b=js&f=3.0/page/vr/previewnew.js?v=202409096351222"></script>
+        <style>
+            #loadingImg .h5_img {
+                max-width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+            #loadingImg .pc_img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+            #loadingImg .h5_video {
+                max-width: 100%;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+            #loadingImg .pc_video {
+                width: 80%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+            #loadingImg .h5_text {
+                width: 80vw;
+                min-height: 40vh;
+                max-height: 62vh;
+                border: 2px dashed #FFF;
+                border-radius: 12px;
+                padding: 20px;
+                box-sizing: border-box;
+                overflow: auto;
+                position: relative;
+            }
+
+            #loadingImg .pc_text {
+                width: 60vw;
+                height: 50vh;
+                border: 2px dashed #FFF;
+                border-radius: 12px;
+                padding: 20px;
+                box-sizing: border-box;
+                overflow: auto;
+                position: relative;
+            }
+
+            #loadingImg .text-center {
+                max-height: 100%;
+                overflow: auto;
+                text-align: left;
+            }
+
+            #loadingImg .text-center::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            #loadingImg .text-center::-webkit-scrollbar-track {
+                background: transparent;
+                border-radius: 2px;
+            }
+
+            #loadingImg .text-center::-webkit-scrollbar-thumb {
+                background: #444;
+                border-radius: 10px;
+            }
+
+            #loadingImg .text-center::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        </style>
+        <script>
+            function startPano() {
+                if (is_offline_pano == 1) {
+                    return false;
+                }
+                $('#bodyclass').remove();
+                if (!document.getElementById("krpanoSWFObject")) {
+                    embedpano({
+                        swf: "https://res1.justeasy.cn/vr2023/tour.swf?v=16",
+                        xml: xml,
+                        target: "pano",
+                        html5: "prefer",
+                        mobilescale: 1.0,
+                        passQueryParameters: true,
+                        wmode: "opaque",
+                        webgl: "auto"
+                    });
+                    krpano = document.getElementById("krpanoSWFObject");
+                }
+                $("#pano-wrapper").show();
+            }
+            function showAdvert() {
+                let value = null;
+                if (advert_type == 3) {
+                    value = open_advert_text;
+                } else {
+                    if (is_mobile > 0) {
+                        value = open_advert_h5;
+                    } else {
+                        value = open_advert_pc;
+                    }
+                }
+                initAdvert(value, is_mobile > 0 ? 'h5' : 'pc');
+            }
+            function initAdvert(value, type) {
+                if (value) {
+                    const imgPrefixPath = 'https://vrimg.justeasy.cn/';
+                    let target;
+                    if (advert_type == 1) {
+                        target = document.createElement('img');
+                        target.setAttribute('class', type + '_img');
+                        target.setAttribute('src', value);
+                    } else if (advert_type == 2) {
+                        $('.time-start .time_text').text('点击进入全景作品');
+                        $('.time-start .time').hide();
+                        target = document.createElement('video');
+                        target.setAttribute('controls', 'controls');
+                        target.setAttribute('class', type + '_video');
+                        target.setAttribute('src', imgPrefixPath + value);
+                        target.muted = true;
+                        target.setAttribute('autoplay', 'autoplay');
+                        target.setAttribute('loop', 'loop');
+                        target.play();
+                    } else if (advert_type == 3) {
+                        target = document.createElement('div');
+                        target.innerHTML = `
+<div style="display: flex;align-items: center;justify-content: center;height: 100%;"><div class="text-center">${value}
+</div></div>`;
+                        target.style.color = open_advert_text_color;
+                        target.setAttribute('class', type + '_text');
+                    }
+                    document.getElementById('loadingImg')?.appendChild(target);
+                    $('#bodyclass').show();
+                } else {
+                    clearInterval(countDownClearTime);
+                    startPano();
+                }
+            }
+        </script>
+        <script>
+            function startPano() {
+                if (is_offline_pano == 1) {
+                    return false;
+                }
+                $('#bodyclass').remove();
+                if (!document.getElementById("krpanoSWFObject")) {
+                    embedpano({
+                        swf: "https://res1.justeasy.cn/vr2023/tour.swf?v=16",
+                        xml: xml,
+                        target: "pano",
+                        html5: "prefer",
+                        mobilescale: 1.0,
+                        passQueryParameters: true,
+                        wmode: "opaque",
+                        webgl: "auto"
+                    });
+                    krpano = document.getElementById("krpanoSWFObject");
+                }
+                $("#pano-wrapper").show();
+            }
+        </script>
+        <script>
+            if (is_offline_pano == 0) {
+                $(function() {
+                    if (app_referer == 2) {
+                        if (is_mobile > 0) {
+                            $('#btn_like').remove();
+                        } else {
+                            $('#btn_like').parent().remove();
+                        }
+                    }
+                    showAdvert();
+                });
+            }
+            if (bodyclass == 'body-class') {
+                $('#loading').show();
+                if (bodyBackgroundColor) {
+                    $("#loading").css('background-color', bodyBackgroundColor);
+                }
+
+            } else {
+                countDownClearTime = true;
+                startPano();
+            }
+        </script>
+        <script type="text/javascript" src="https://res1.justeasy.cn/min/b=js&f=art-template-web.js,swiper4.0.5.min.js,flexible.js,iscroll2.js,navbarscroll.js?v=20240909635"></script>
+        <div class="tab-shuffling visibility no-show" id="tab-shuffling"></div>
+        <script type='text/html' id="template_lb">
+            
+            <div class="lb" id="lb">
+                {{each jsonList val i }}
+                <div class="cont {{if i!=0 }}none{{/if}} vr-lb-groupid-{{val.id}} ">
+                    <div class="swiper-container gallery-top gallery-top_{{val.id}}">
+                        <div class="swiper-wrapper" style="display: none;">
+                            {{each val.son val2 i}}
+                            <div class="swiper-slide">{{val2.name}}</div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs gallery-thumbs_{{val.id}}">
+                        <div class="swiper-wrapper">
+                            {{each val.son val2 k}}
+                            <div class="swiper-slide vr-slide vr-pano2sceneid-{{val2.pano2sceneid}} {{if k==0 }} vr-groupid-{{val2.groupid}} {{/if}} {{if val2.hide==1}}none{{/if}}" data-index="{{k}}" data-pano2sceneid="{{val2.pano2sceneid}}" data-groupid="{{val2.groupid}}" title="{{val2.name}}" data-compare="{{val2.compare_id}}" >
+                                {{if val2.compare_id!= 0}}
+                                <div class="compare-img" style="position: absolute;right: 2px;    transform: scale(0.8);background: #2222227a;height: 29px;top: 2px;border-radius: 2px;">
+                                    <img src="https://res1.justeasy.cn/vr16/skin1/fenping.png" alt="">
+                                </div>
+                                {{/if}}
+
+                                <div class="pic"><img id="pic-img-{{val.val2}}" src="https://vrimg.justeasy.cn/{{val2.preview}}"></div>
+                                <div class="name2">
+                                    <div id="container_small_tip{{val2.pano2sceneid}}" class="container_small_tip">
+                                        <div id="content_small_tip_{{val2.pano2sceneid}}" class="content_small_tip">{{val2.name}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+
+            <div class="wrapper02 nav-tab none" id="nav-tab">
+                <div class="scroller">
+                    <ul class="clearfix">
+                        {{each jsonName val i}}
+                        {{if i == 0}}
+                        <li class="item  nav-tab-groupid-{{val.id}}" data-id="{{val.id}}" data-index="{{i}}"><a href="javascript:void(0)">{{val.name}}</a></li>
+                        {{else/}}
+                        <li class="item  nav-tab-groupid-{{val.id}}" data-id="{{val.id}}" data-index="{{i}}"><a href="javascript:void(0)">{{val.name}}</a></li>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        
+        </script>
+        <script type="text/javascript" src="https://res1.justeasy.cn/min/b=js&f=3.0/page/vr/roll.js?v=20240909635"></script>
+        <script>
+            json_List = {
+                jsonName: [{
+                    "name": "\u9ed8\u8ba4",
+                    "id": 0
+                }],
+                jsonList: [{
+                    "id": 0,
+                    "name": "\u9ed8\u8ba4",
+                    "son": [{
+                        "name": "\u4e00\u697c",
+                        "groupid": 0,
+                        "sceneid": "52228378",
+                        "pano2sceneid": "45917237",
+                        "preview": "pano\/20211122\/52-084551_619ae83fc003f.tiles\/thumb.jpg",
+                        "hide": 0,
+                        "compare_id": 0
+                    }, {
+                        "name": "\u4e8c\u697c",
+                        "groupid": 0,
+                        "sceneid": "52228398",
+                        "pano2sceneid": "45917235",
+                        "preview": "pano\/20211122\/52-084620_619ae85c407bc.tiles\/thumb.jpg",
+                        "hide": 0,
+                        "compare_id": 0
+                    }, {
+                        "name": "\u4e09\u697c",
+                        "groupid": 0,
+                        "sceneid": "52344774",
+                        "pano2sceneid": "45917236",
+                        "preview": "pano\/20211124\/42-104314_619da6c2884c5.tiles\/thumb.jpg",
+                        "hide": 0,
+                        "compare_id": 0
+                    }]
+                }]
+            };
+            function lbFun1(el, num, OffsetAfter) {
+                galleryThumbs = new Swiper('.gallery-thumbs_' + el,{
+                    spaceBetween: 10,
+                    slidesPerView: num,
+                    freeMode: true,
+                    watchSlidesVisibility: true,
+                    watchSlidesProgress: true,
+                    slidesOffsetAfter: OffsetAfter,
+                    centerInsufficientSlides: true,
+                    on: {
+                        init: function() {
+                            if (el > 0) {
+                                $(".swiper-slide").removeClass('swiper-slide-active swiper-slide-thumb-active').children();
+                            }
+                        },
+                        resize: function() {
+                            this.update();
+                        }
+                    },
+                });
+                galleryTop = new Swiper('.gallery-top_' + el,{
+                    spaceBetween: 10,
+                    slidesOffsetAfter: 30,
+                    centerInsufficientSlides: true,
+                    thumbs: {
+                        swiper: galleryThumbs
+                    }
+                });
+            }
+            $(document).ready(function() {
+                if (is_offline_pano == 1) {
+                    return false;
+                }
+                $(window).resize(function(event) {
+                    reloadnum();
+                });
+                $(window).bind('orientationchange', function(e) {
+                    $("#tab-shuffling").addClass('phone');
+                    $(".phone .swiper-slide").css({
+                        "width": "70px !important",
+                        "height": "70px !important"
+                    });
+                    reloadnum();
+                });
+                var _w, _num;
+                if (vr_model_group != 0) {
+                    $('#show_scenes').show();
+                    $(document).on('click', '.swiper-container .vr-slide', function() {
+                        let _SCENEID = $(this).attr('data-pano2sceneid');
+                        let _compare_id = $(this).attr('data-compare');
+                        if (_compare_id > 0) {
+                            krpano.set("layer[compare_btn].visible", true);
+                        } else {
+                            krpano.set("layer[compare_btn].visible", false);
+                        }
+                        krpano.call("loadscene(scene_" + _SCENEID + ",null,MERGE,BLEND(0.8));");
+                        if (vip_auth_TopAdvert > 0) {
+                            for (var i in krpano.get("hotspot").getArray()) {
+                                if (krpano.get("hotspot").getArray()[i].name.indexOf('nadirlogo') >= 0) {
+                                    krpano.call("delhotspot(" + krpano.get("hotspot").getArray()[i].name + ")");
+                                }
+                            }
+                        }
+                        $(".swiper-slide").removeClass('swiper-slide-active swiper-slide-thumb-active');
+                        $('.vr-pano2sceneid-' + _SCENEID).addClass('swiper-slide-active swiper-slide-thumb-active');
+                        handerWordRoll(_SCENEID);
+                    });
+                    let html = template("template_lb", json_List);
+                    let is_pic_true = IsPC();
+                    function IsPC() {
+                        var userAgentInfo = navigator.userAgent;
+                        var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+                        var flag = true;
+                        for (var v = 0; v < Agents.length; v++) {
+                            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                                flag = false;
+                                break;
+                            }
+                        }
+                        return flag;
+                    }
+                    $("#tab-shuffling").append(html);
+                    handerWordRoll(json_List.jsonList[0].son[0].pano2sceneid)
+                    function reloadnum() {
+                        if (is_pic_true) {
+                            $("#tab-shuffling").removeClass('phone');
+                            _w = $('body,html').width() - 140;
+                            _num = Math.ceil(_w / 110);
+                        } else {
+                            $("#tab-shuffling").addClass('phone');
+                            _w = $('body,html').width();
+                            _num = Math.ceil(_w / 80);
+                        }
+                        lbFun1(json_List.jsonList[0].id, _num, (json_List.jsonList[0].son.length * 15));
+                    }
+                    reloadnum();
+                    $('#nav-tab').navbarscroll({
+                        defaultSelect: tag_index,
+                        scrollerWidth: 6,
+                        fingerClick: 1,
+                        endClickScroll: function(obj) {}
+                    });
+                    $("#nav-tab .item").click(function() {
+                        let _index = $(this).index();
+                        $("#lb .cont").eq(_index).show().siblings().hide();
+                        lbFun1(json_List.jsonList[_index].id, _num, (json_List.jsonList[_index].son.length * 15));
+                        $(".swiper-slide").removeClass('swiper-slide-thumb-active swiper-slide-active');
+                        $(".vr-pano2sceneid-" + krpano.get("scene[get(xml.scene)].id")).addClass('swiper-slide-thumb-active swiper-slide-active');
+                    });
+                    $(document).on('click', '#show_scenes', function() {
+                        if ($('#tab-shuffling').hasClass('visibility')) {
+                            $('#tab-shuffling').removeClass('visibility');
+                            $(".tab-shuffling").css({
+                                transform: 'translateY(0px)'
+                            });
+                            $(".tab-shuffling").addClass('no-show');
+                        } else {
+                            let isTure = $("#tab-shuffling").hasClass('no-show');
+                            if (isTure) {
+                                $(".tab-shuffling").css({
+                                    transform: 'translateY(300px)'
+                                });
+                                $(".tab-shuffling").removeClass('no-show');
+                            } else {
+                                $(".tab-shuffling").css({
+                                    transform: 'translateY(0px)'
+                                });
+                                $(".tab-shuffling").addClass('no-show');
+                            }
+                        }
+                    });
+                }
+            });
+        </script>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?d354a40e1143f3574bc86106fd51eddb";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            }
+            )();
+        </script>
+        <script type="text/javascript">
+            function countDownFn() {
+                if (countDownClearTime) {
+                    return false;
+                }
+                countDownClearTime = setInterval( () => {
+                    if (_time == 0) {
+                        clearInterval(countDownClearTime);
+                        _time = 0
+                        advert_type != 2 && startPano();
+                    } else {
+                        _time--;
+                    }
+                    $("#time").text(_time);
+                }
+                , 1000)
+            }
+            if (_time > 0 && is_offline_pano == 0 && is_encrypt != 1) {
+                countDownFn();
+            }
+            function goTel(mobile) {
+                if (app == "ios") {
+                    window.webkit.messageHandlers.goTel.postMessage({
+                        num: mobile
+                    });
+                } else {
+                    android.goTel(mobile);
+                }
+            }
+            function getCanvasInfoData() {
+                var test = G('test');
+                var code = $("#shareimg").find("canvas")[0];
+                var codeImg = code.toDataURL('image/png');
+                getCanvasWhite();
+                var data = {
+                    canvas: {
+                        casePicUrl: "https://vrimg.justeasy.cn/pano/20211122/52-084551_619ae83fc003f.tiles/thumb.jpg",
+                        codeWhiteUrl: whiteUrl,
+                        codeUrl: codeImg,
+                        logoUrl: "https://res1.justeasy.cn/images/vr/vr20227/logo2.png",
+                        uerUrl: "data:image/jpeg;base64,aHR0cHM6Ly9yZXMxLmp1c3RlYXN5LmNuL2ltYWdlcy9kZWZhdWx0aGVhZC5qcGc=",
+                        title: "星莱健身",
+                        userName: ""
+                    },
+                    operate: {
+                        linkUrl: ""
+                    }
+                }
+                var _html = `<img src="${data.canvas.casePicUrl}" crossOrigin="anonymous" id="canvas_case_pic" ><img src="${data.canvas.codeWhiteUrl}" crossOrigin="anonymous" id="canvas_code_white" ><img src="${data.canvas.codeUrl}" crossOrigin="anonymous" id="canvas_code"><img src="${data.canvas.logoUrl}" crossOrigin="anonymous" id="canvas_logo" ><img src="${data.canvas.uerUrl}" crossOrigin="anonymous" id="canvas_user"/>`
+                if (test == 1) {
+                    console.log(data);
+                }
+                $("#canvas_img").append(_html);
+                if (data.canvas.title.length > 10) {
+                    data.canvas.title = data.canvas.title.substring(0, 10) + "...";
+                }
+                if (data.canvas.userName.length > 6) {
+                    data.canvas.userName = data.canvas.userName.substring(0, 6) + "...";
+                }
+                setTimeout(function() {
+                    canvasPop(data.canvas.title, data.canvas.userName);
+                }, 300);
+            }
+        </script>
+        <div class="vr-gg-box none" id="preview_advert"></div>
+        <script>
+            var is_self = parseInt(0);
+            var uid_ = parseInt(2136239);
+            var panoid_ = parseInt(19434915);
+            $.ajax({
+                url: '/pano/index/getSelf',
+                data: {
+                    uid: uid_,
+                    panoid: panoid_,
+                },
+                dataType: 'json',
+                type: 'get',
+            }).done(function(data) {
+                if (data.status == 200) {
+                    window.location.href = 'https://vr.justeasy.cn/Pano/Index/errorself';
+                }
+            }).fail(function() {})
+            $(document).ready(function() {
+                setTimeout(function() {
+                    $.ajax({
+                        url: vr_site_url + "Pano/Index/is_first_compare",
+                        type: 'get',
+                        dataType: 'JSONP',
+                        data: {
+                            panoid: PANOID,
+                        },
+                    }).done(function(data) {
+                        if (data.status == 200) {
+                            krpano.set("layer[compare_btn].visible", true);
+                        } else {
+                            krpano.set("layer[compare_btn].visible", false);
+                        }
+                    }).fail(function() {
+                        krpano.set("layer[compare_btn].visible", false);
+                    });
+                }, 1000);
+            })
+            $(document).ready(function() {
+                setTimeout(function() {
+                    wx.config({
+                        appId: wx_share_appId,
+                        timestamp: wx_share_timestamp,
+                        nonceStr: wx_share_nonceStr,
+                        signature: wx_share_signature,
+                        jsApiList: ['onMenuShareQQ', 'onMenuShareAppMessage', 'updateAppMessageShareData', 'updateTimelineShareData']
+                    });
+                    wx.ready(function() {
+                        wx.onMenuShareQQ({
+                            title: wx_share_title,
+                            desc: wx_share_desc.replace('&amp;', '&'),
+                            link: location.toString(),
+                            imgUrl: wx_share_imgUrl
+                        });
+                        wx.onMenuShareAppMessage({
+                            title: wx_share_title,
+                            desc: wx_share_desc.replace('&amp;', '&'),
+                            link: location.toString(),
+                            imgUrl: wx_share_imgUrl
+                        });
+                        wx.updateAppMessageShareData({
+                            title: wx_share_title,
+                            desc: wx_share_desc.replace('&amp;', '&'),
+                            link: location.toString(),
+                            imgUrl: wx_share_imgUrl
+                        });
+                        wx.updateTimelineShareData({
+                            title: wx_share_title,
+                            desc: wx_share_desc.replace('&amp;', '&'),
+                            link: location.toString(),
+                            imgUrl: wx_share_imgUrl
+                        });
+                    });
+                }, 1000);
+            })
+        </script>
+        <script>
+            $(document).ready(function() {
+                if (avatar) {
+                    setTimeout(function() {
+                        krpano.set("layer[avatar_1].url", avatar);
+                    }, 1000);
+                }
+            })
+        </script>
+    </body>
+</html>

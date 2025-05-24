@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Wikipedia Search Page</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 id="title">Wikipedia Search Page</h1>
+      <!-- TASK 1 -->
+      <!-- Add Wikipedia logo as an image (you can find it at: https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/263px-Wikipedia-logo-v2.svg.png ) -->
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/263px-Wikipedia-logo-v2.svg.png" alt="Wikipedia Logo" />
+      </br>
+      <!-- Add an input field for the search term -->
+      <input type="text" id="search" placeholder="Type your search term here" />
+      <!-- And add a button to trigger the search -->
+      <button id="searchButton">Search</button>
+    </div>
+    </br>
+    <ul id="results"></ul>
+    </br>
+    <!-- Script(Placed after DOM elements) Sourced from ChatGPT -->
+    <script>
+      // Add event listener after DOM is loaded
+      window.onload = function () {
+        document
+          .getElementById("searchButton")
+          .addEventListener("click", searchWikipedia);
+      };
+    </script>
+  </body>
+</html>

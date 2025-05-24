@@ -1,0 +1,29 @@
+h1 {
+    color:blue
+}
+
+div p {
+    color:green
+}
+
+
+
+#parent {
+    display: flex;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: stretch;
+    background-color: lightyellow;
+    padding: 20px;
+    height: 350px;
+}
+
+.child {
+    background-color: rgb(194, 229, 241);
+    border: 2px solid rgb(108, 108, 240);
+    height: 100px;
+    width: 100px;
+    /* flex-grow 决定“剩下的空间怎么分”，默认是 0 表示不增长，设为正数就能按比例把多余空间分掉。*/
+    flex-grow: 1;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Inventory Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Library Inventory Page</h1>
+    <!-- Add input fields for book name, author, publication year, and genre -->
+    <input type="text" id="bookName" placeholder="Book Name" />
+    <input type="text" id="author" placeholder="Auther" />
+    <input type="text" id="dateofPublication" placeholder="Date of Publication" />
+    <input type="text" id="genre" placeholder="Genre" />
+
+    <!-- Add a button to add a book to the library -->
+    <button onclick="addBookToLibrary()">Add Book</button>
+
+    <!-- Add a button to display all books currently in the library -->
+    <button onclick="displayAllBooks()">Display all Books</button>
+
+    <!-- Show a heading element that displays the total number of books in the library -->
+    <h2 id="totalBooks"></h2>
+
+    <!-- Set up a list to display all books -->
+    <ul id="bookList"></ul>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+/* Page background and font */
+body {
+    background-color: #f9f6f2;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  /*text-align learned from https://developer.mozilla.org/en-US/docs/Web/CSS/text-align */ 
+  h2 {
+    text-align: center;
+    }
+    
+  #header {
+    color: #003366;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #footer-text {
+    color: #444444;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .highlight {
+    color: #006666;
+  }
+  
+  .section {
+    padding: 20px 40px;
+  }
+
+  .profile-img {
+    width: 280px;
+    /* display learned from https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+    display: block;
+    /* margin learned from https://developer.mozilla.org/en-US/docs/Web/CSS/margin */
+    margin: 0 auto;
+  }
+  
+  a:hover {
+    color: #cc0000;
+    /*text-decoration learned from https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration*/
+    text-decoration: underline;
+  }

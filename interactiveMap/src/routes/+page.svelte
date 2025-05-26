@@ -32,12 +32,9 @@
         <Table.Caption>{data.identification.label}</Table.Caption>
         <Table.Header>
             <Table.Row>
-                <Table.Head>Name</Table.Head>
-                <Table.Head>Object type</Table.Head>
-                <Table.Head>Museum Number</Table.Head>
-                <Table.Head>Full TEO Findspot</Table.Head>
-                <Table.Head>Script</Table.Head>
-                <Table.Head>Language</Table.Head>
+                {#each propertyLabels as label}
+                    <Table.Head>{label}</Table.Head>
+                {/each}
             </Table.Row>
         </Table.Header>
         <Table.Body>

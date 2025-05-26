@@ -19,12 +19,10 @@
     style="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
     >
         {#each data.items as item}
-            {#if item.coordinates?.longitude && item.coordinates?.latitude}
-                <DefaultMarker lngLat={{ 
-                    lng: item.coordinates.longitude, 
-                    lat: item.coordinates.latitude 
-                }} />
-            {/if}
+            <DefaultMarker lngLat={{ 
+                lng: item.coordinates.longitude, 
+                lat: item.coordinates.latitude 
+            }}>
         {/each}
     </MapLibre>
 
